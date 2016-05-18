@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mohammed Sadiq"]
   spec.email         = ["sadiqmmm@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = spec.description
+  spec.description   = "This gem provides wrapper for plyr.io Javascript library for your Rails 4 and Rails 5 application."
+  spec.homepage      = "https://github.com/sadiqmmm/plyr-rails"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
