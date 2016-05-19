@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["sadiqmmm@gmail.com"]
 
   spec.summary       = spec.description
-  spec.description   = "This gem provides wrapper for plyr.io Javascript library for your Rails 4 and Rails 5 application."
-  spec.homepage      = "https://github.com/sadiqmmm/plyr-rails"
+  spec.description   = 'This gem provides wrapper for plyr.io Javascript library for your Rails 4 and Rails 5 application.'
+  spec.homepage      = 'https://github.com/sadiqmmm/plyr-rails'
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
