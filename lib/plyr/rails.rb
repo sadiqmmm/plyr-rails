@@ -2,6 +2,6 @@ require "plyr/rails/version"
 
 module Plyr
   module Rails
-    # Your code goes here...
+    class Engine < ::Rails::Engine; end
   end
 end
