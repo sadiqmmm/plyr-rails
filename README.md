@@ -32,13 +32,20 @@ Now you need to edit your `app/assets/stylesheets/application.css` file and add 
 
 ## Usage
 
-TODO: To load and intialize the player
+To load and intialize the player.
 
-Now you need to add this to your `app/assets/javascripts/application.js` file and add the following line:
+You need to add this to your `app/assets/javascripts/application.js` file and add the following line:
 ``` javascript
 $(document).ready(function(){
 	plyr.setup();	
 });
+```
+
+Add html code to your any view file `app/views/blogs/index.erb` file and add the following code:
+``` html
+<div class="plyr">
+    <div data-video-id="bTqVqk7FSmY" data-type="youtube"></div>
+</div>
 ```
 
 ## Development
