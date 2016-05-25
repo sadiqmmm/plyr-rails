@@ -20,9 +20,26 @@ Or install it yourself as:
 
     $ gem install plyr-rails
 
+Now you need to edit your `app/assets/javascripts/application.js` file and add the following line:
+``` javascript
+//= require plyr
+```
+
+Now you need to edit your `app/assets/stylesheets/application.css` file and add the following line:
+``` css
+*= require plyr
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+TODO: To load and intialize the player
+
+Now you need to add this to your `app/assets/javascripts/application.js` file and add the following line:
+``` javascript
+$(document).ready(function(){
+	plyr.setup();	
+});
+```
 
 ## Development
 
