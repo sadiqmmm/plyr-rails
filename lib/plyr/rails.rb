@@ -4,10 +4,7 @@ module Plyr
   module Rails
     class Engine < ::Rails::Engine
         initializer :append_dependent_assets_path, :group => :all do |app|
-          app.config.assets.paths += %w( sprite )
-
-          app.config.assets.precompile += %w( plyr.scss )
-          app.config.assets.precompile += %w( plyr.js )
+          app.config.assets.paths += %w( sprite )        
 
           app.config.assets.precompile += %w( plyr-captions-off.svg )          
           app.config.assets.precompile += %w( plyr-captions-on.svg )          
