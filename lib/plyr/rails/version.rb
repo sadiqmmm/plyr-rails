@@ -1,5 +1,5 @@
 module Plyr
   module Rails
-    VERSION = "0.1.4"
+    VERSION = "2.0.11"
   end
 end
