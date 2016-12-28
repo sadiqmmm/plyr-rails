@@ -69,6 +69,39 @@ Add this sample code to your template file like `index.html.erb`
 </div>
 ```
 
+## More HTML examples
+Plyr extends upon the standard HTML5 markup so that's all you need for those types.
+
+``` html
+
+HTML5 Video
+
+<video poster="/path/to/poster.jpg" controls>
+  <source src="/path/to/video.mp4" type="video/mp4">
+  <source src="/path/to/video.webm" type="video/webm">
+  <!-- Captions are optional -->
+  <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default>
+</video>
+HTML5 Audio
+
+<audio controls>
+  <source src="/path/to/audio.mp3" type="audio/mp3">
+  <source src="/path/to/audio.ogg" type="audio/ogg">
+</audio>
+For YouTube and Vimeo, Plyr uses the standard YouTube API markup (an empty <div>):
+
+YouTube embed
+
+<div data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
+
+Vimeo embed
+
+<div data-type="vimeo" data-video-id="143418951"></div>
+Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
+
+```
+
 ## Full documentation 
 
 Read the plyr.io documentation here https://github.com/Selz/plyr
