@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sadiqmmm@gmail.com"]
 
   spec.summary       = spec.description
-  spec.description   = 'This gem provides wrapper for plyr.io Javascript library for your Rails 4 and Rails 5 application.'
+  spec.description   = 'This gem provides wrapper for plyr.io JavaScript library for your Rails 4 and Rails 5 application.'
   spec.homepage      = 'https://github.com/sadiqmmm/plyr-rails'
   spec.license       = "MIT"
 
