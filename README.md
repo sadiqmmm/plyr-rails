@@ -51,7 +51,14 @@ Add this sample code to your `app/assets/javascripts/application.js` file
 
 ```
 
-*Note:* Here i am using `gem 'jquery-turbolinks'` for using the jquery $(document).ready function 
+Using with turbolinks only
+
+``` javascript
+  $(document).on("turbolinks:load", function() {
+    plyr.setup();	
+  });
+
+```
 
 Add this sample code to your template file like `index.html.erb`
 
