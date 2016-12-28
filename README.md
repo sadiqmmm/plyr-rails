@@ -91,22 +91,22 @@ Plyr extends upon the standard HTML5 markup so that's all you need for those typ
   <source src="/path/to/audio.ogg" type="audio/ogg">
 </audio>
 ```
-For YouTube and Vimeo, Plyr uses the standard YouTube API markup (an empty <div>):
+For YouTube and Vimeo, Plyr uses the standard YouTube API markup (an empty `<div>`):
 
 ### YouTube embed
 
 ``` html
 <div data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
 ```
+
 Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
 
 ### Vimeo embed
 
 ``` html
 <div data-type="vimeo" data-video-id="143418951"></div>
-Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
-
 ```
+Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
 
 ## Full documentation 
 
