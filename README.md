@@ -46,7 +46,7 @@ Add this sample code to your `app/assets/javascripts/application.js` file
 
 ``` javascript
   $(document).ready(function(){  
-    plyr.setup();	
+    Plyr('#plyr');	
   });
 
 ```
@@ -55,7 +55,7 @@ Using with turbolinks only
 
 ``` javascript
   $(document).on("turbolinks:load", function() {
-    plyr.setup();	
+    Plyr('#plyr');	
   });
 
 ```
