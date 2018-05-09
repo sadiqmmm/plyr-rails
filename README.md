@@ -58,7 +58,7 @@ Using with Jquery required and turbolinks
 
 ``` javascript
   $(document).on("turbolinks:load", function() {
-    new Plyr('#plyr');	
+    const player = new Plyr('#player');
   });
 
 ```
