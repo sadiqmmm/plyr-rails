@@ -38,7 +38,8 @@ Now you need to edit your `app/assets/javascripts/application.js` file and add t
 //= require plyr
 ```
 
-## Note: Usage code has be updated to plyr version 3. Please update your code, if you're using plyr version 2
+## Note: Usage code has be updated to plyr version 3.
+## Please update your code, if you're using plyr version 2
 
 Here is the example of working code with Jquery to test with your Rails application.
 
