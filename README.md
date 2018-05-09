@@ -46,7 +46,7 @@ Add this sample code to your `app/assets/javascripts/application.js` file
 
 ``` javascript
   $(document).ready(function(){  
-    plyr.setup();	
+    new Plyr('#plyr');	
   });
 
 ```
@@ -55,7 +55,7 @@ Using with turbolinks only
 
 ``` javascript
   $(document).on("turbolinks:load", function() {
-    plyr.setup();	
+    new Plyr('#plyr');	
   });
 
 ```
@@ -64,49 +64,69 @@ Add this sample code to your template file like `index.html.erb`
 
 ``` html
 <!-- Place somewhere in the <body> of your page -->
-<div class="plyr">
-    <div data-video-id="bTqVqk7FSmY" data-type="youtube"></div>
+<div id="plyr">
+    <div data-plyr-embed-id="bTqVqk7FSmY" data-plyr-provider"youtube"></div>
 </div>
 ```
 
 ## More HTML examples
-Plyr extends upon the standard HTML5 markup so that's all you need for those types.
 
+Plyr extends upon the standard HTML5 media elementmarkup so that's all you need for those types.
 
-### HTML5 Video
+#### HTML5 Video
 
-``` html
-<video poster="/path/to/poster.jpg" controls>
-  <source src="/path/to/video.mp4" type="video/mp4">
-  <source src="/path/to/video.webm" type="video/webm">
-  <!-- Captions are optional -->
-  <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default>
+```html
+<video poster="/path/to/poster.jpg" id="player" playsinline controls>
+    <source src="/path/to/video.mp4" type="video/mp4">
+    <source src="/path/to/video.webm" type="video/webm">
+
+    <!-- Captions are optional -->
+    <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default>
 </video>
 ```
-### HTML5 Audio
 
-``` html
-<audio controls>
-  <source src="/path/to/audio.mp3" type="audio/mp3">
-  <source src="/path/to/audio.ogg" type="audio/ogg">
+#### HTML5 Audio
+
+```html
+<audio id="player" controls>
+    <source src="/path/to/audio.mp3" type="audio/mp3">
+    <source src="/path/to/audio.ogg" type="audio/ogg">
 </audio>
 ```
-For YouTube and Vimeo, Plyr uses the standard YouTube API markup (an empty `<div>`):
 
-### YouTube embed
+#### YouTube embed
 
-``` html
-<div data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+```html
+<div class="plyr__video-embed" id="player">
+    <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+</div>
 ```
 
-Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
+_Note_: The `plyr__video-embed` classname will make the player a responsive 16:9 (most common) iframe embed. When plyr itself kicks in, your custom `ratio` config option will be used.
 
-### Vimeo embed
+Or the `<div>` non progressively enhanced method:
 
-``` html
-<div data-type="vimeo" data-video-id="143418951"></div>
+```html
+<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
 ```
-Note: data-video-id value can now be the ID or URL for the video. This attribute name will change in a future release to reflect this change.
+
+_Note_: The `data-plyr-embed-id` can either be the video ID or URL for the media.
+
+#### Vimeo embed
+
+Much the same as YouTube above.
+
+```html
+<div class="plyr__video-embed" id="player">
+    <iframe src="https://player.vimeo.com/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media" allowfullscreen allowtransparency allow="autoplay"></iframe>
+</div>
+```
+
+Or the `<div>` non progressively enhanced method:
+
+```html
+<div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="76979871"></div>
+```
 
 ## Full documentation 
 
