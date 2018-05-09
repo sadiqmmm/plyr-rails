@@ -38,20 +38,23 @@ Now you need to edit your `app/assets/javascripts/application.js` file and add t
 //= require plyr
 ```
 
-## Usage
+## Usage code updated to plyr version 3
 
-Here is the example working code to test with your Rails application.
+Here is the example of working code with Jquery to test with your Rails application.
 
 Add this sample code to your `app/assets/javascripts/application.js` file
 
-``` javascript
-  $(document).ready(function(){  
-    new Plyr('#plyr');	
+Using with Javascript and turbolinks
+
+``` javascript  
+
+  document.addEventListener("turbolinks:load", function() {
+    const player = new Plyr('#player');
   });
 
 ```
 
-Using with turbolinks only
+Using with Jquery required and turbolinks
 
 ``` javascript
   $(document).on("turbolinks:load", function() {
@@ -64,9 +67,7 @@ Add this sample code to your template file like `index.html.erb`
 
 ``` html
 <!-- Place somewhere in the <body> of your page -->
-<div id="plyr">
-    <div data-plyr-embed-id="bTqVqk7FSmY" data-plyr-provider"youtube"></div>
-</div>
+<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
 ```
 
 ## More HTML examples
