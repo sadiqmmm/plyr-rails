@@ -65,7 +65,7 @@ Add this sample code to your template file like `index.html.erb`
 ``` html
 <!-- Place somewhere in the <body> of your page -->
 <div id="plyr">
-    <div data-video-id="bTqVqk7FSmY" data-type="youtube"></div>
+    <div data-plyr-embed-id="bTqVqk7FSmY" data-plyr-provider"youtube"></div>
 </div>
 ```
 
@@ -94,11 +94,7 @@ Plyr extends upon the standard HTML5 media elementmarkup so that's all you need 
 </audio>
 ```
 
-For YouTube and Vimeo players, Plyr uses progressive enhancement to enhance the default `<iframe>` embeds. Below are some examples. The `plyr__video-embed` classname will make the embed responsive. You can add the `autoplay`, `loop` and `playsinline` (YouTube only) query parameters to the URL and they will be set as config options automatically. For YouTube, the `origin` should be updated to reflect the domain you're hosting the embed on, or you can opt to omit it.
-
 #### YouTube embed
-
-We recommend [progressive enhancement](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/) with the embedded players. You can elect to use an `<iframe>` as the source element (which Plyr will progressively enhance) or a bog standard `<div>` with two essential data attributes - `data-plyr-provider` and `data-plyr-embed-id`.
 
 ```html
 <div class="plyr__video-embed" id="player">
