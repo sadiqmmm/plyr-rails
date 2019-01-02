@@ -22,8 +22,7 @@ module Plyr
           app.config.assets.precompile += %w( plyr-restart.svg )
           app.config.assets.precompile += %w( plyr-rewind.svg )
           app.config.assets.precompile += %w( plyr-settings.svg )
-          app.config.assets.precompile += %w( plyr-volume.svg )
-          
+          app.config.assets.precompile += %w( plyr-volume.svg )          
         end  
       end
   end
