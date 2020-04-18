@@ -26,7 +26,7 @@ Or install it yourself as:
 
     $ gem install plyr-rails
 
-Now you need to edit your `app/assets/javascripts/application.css` file and add the following line:
+Now you need to edit your `app/assets/stylesheets/application.css` file and add the following line:
 
 ``` css
 *= require plyr
